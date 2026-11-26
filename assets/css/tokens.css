@@ -1,0 +1,36 @@
+
+
+:root {
+
+  --ab-walnut: #4C2C1C;
+  --ab-copper: #905027;
+  --ab-cream: #F4ECDF;
+  --ab-oak: #C98B57;
+  --ab-ebony: #17110E;
+
+  --ab-paper: #FBF7F0;
+  --ab-cream-2: #EADFCC;
+  --ab-line: #DCCDB6;
+  --ab-ui: #8C7A68;
+  --ab-mute: #6E5A4C;
+  --ab-mute-dk: #B9A792;
+  --ab-oak-hi: #D59C6C;
+  --ab-error: #A3321F;
+  --ab-error-dk: #F0A08C;
+
+  --ab-display: 'League Spartan', 'Spartan Fallback', 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+  --ab-text: 'Poppins', 'Poppins Fallback', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+
+  --ab-r-sm: 4px;
+  --ab-r-md: 10px;
+  --ab-r-lg: 18px;
+  --ab-r-pill: 999px;
+
+  --ab-ease-pass: cubic-bezier(.65,0,.35,1);
+  --ab-ease-lay: cubic-bezier(.2,.9,.25,1.15);
+  --ab-ease-calm: cubic-bezier(.2,.8,.2,1);
+  --ab-dur-fast: 160ms;
+  --ab-dur-base: 260ms;
+  --ab-dur-pass: 900ms;
+  --ab-dur-coat: 1200ms;
+}

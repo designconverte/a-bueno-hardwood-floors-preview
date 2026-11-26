@@ -1,0 +1,8 @@
+
+@font-face { font-family: 'League Spartan'; font-style: normal; font-weight: 500 800; font-display: swap; src: url("../fonts/league-spartan-latin.woff2") format("woff2"); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/poppins-400-latin.woff2") format("woff2"); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/poppins-500-latin.woff2") format("woff2"); }
+@font-face { font-family: 'Poppins'; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/poppins-600-latin.woff2") format("woff2"); }
+@font-face { font-family: 'Poppins'; font-style: italic; font-weight: 400; font-display: swap; src: url("../fonts/poppins-italic-400-latin.woff2") format("woff2"); }
+@font-face { font-family: 'Spartan Fallback'; font-weight: 500 900; src: local('Arial Bold'), local('Arial-BoldMT'), local('Arial'); size-adjust: 91.3%; ascent-override: 84%; descent-override: 22%; }
+@font-face { font-family: 'Poppins Fallback'; src: local('Arial'); size-adjust: 112%; ascent-override: 93%; descent-override: 31%; }
