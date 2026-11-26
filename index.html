@@ -291,7 +291,7 @@
     <header class="work__head">
       <p class="label" data-reveal-title><svg class="hb" aria-hidden="true"><use href="#hb-mark"></use></svg>Recent floors</p>
       <h2 class="h2" id="work-title" data-reveal-title>Same room. Same angle. <em class="nl">Three coats&nbsp;later.</em></h2>
-      <p class="lead" data-reveal-title>Real floors from this year, in our customers' homes. Drag to&nbsp;compare.</p>
+      <p class="lead" data-reveal-title>Real floors from this year, in our customers' homes. <span class="lead__drag">Drag to&nbsp;compare.</span><span class="lead__scroll">Keep scrolling: each floor comes back, start to&nbsp;finish.</span></p>
       <div class="jobs" role="group" aria-label="Choose a floor" data-jobs>
         <button type="button" class="job" data-tab="weth" data-tag="Wethersfield, CT · Bona AmberSeal · Bona Traffic" aria-pressed="true"><b>Wethersfield, CT</b><span>Bona AmberSeal · Bona Traffic</span></button>
         <button type="button" class="job" data-tab="midb" data-tag="Middlebury, CT · Espresso · oil-based polyurethane" aria-pressed="false"><b>Middlebury, CT</b><span>Espresso · oil-based polyurethane</span></button>
@@ -304,6 +304,13 @@
       </div>
     </header>
 
+    <div class="work__track" data-work-track>
+    <div class="work__pin">
+    <div class="work__now" data-work-now>
+      <p class="work__now-t"><b data-now-name>Wethersfield, CT</b><span data-now-tag>Bona AmberSeal · Bona Traffic</span></p>
+      <p class="work__now-n"><span data-now-i>1</span>/<span data-now-total>3</span></p>
+      <div class="work__segs" data-now-segs></div>
+    </div>
     <figure class="reel" data-reel data-reel-lazy data-label-pause="Pause" data-label-play="Play the job" data-label-replay="Replay the job">
       <div class="reel__table" data-gallery>
         <div class="reel__frame" data-reel-frame>
@@ -338,6 +345,8 @@
         <div class="reel__rule" data-reel-rule role="slider" tabindex="0" aria-label="Stage of the floor" aria-valuemin="1" aria-valuemax="3" aria-valuenow="3" aria-valuetext="Finished"><span class="reel__fill" data-reel-fill></span><span class="reel__stops" data-reel-stops></span><span class="reel__knob" data-reel-knob></span></div>
       </figcaption>
     </figure>
+    </div>
+    </div>
   </div>
 </section>
 
@@ -373,6 +382,7 @@
         <span class="why__go">This is my floor <svg class="ic" aria-hidden="true"><use href="#i-arrow-right"></use></svg></span>
       </a>
     </div>
+    <div class="why__bar" aria-hidden="true"><span class="why__track"><i data-why-fill></i></span><span class="why__n"><b data-why-i>1</b>/<span data-why-total>4</span></span></div>
   </div>
 </section>
 
@@ -619,7 +629,11 @@
 </section>
 
 <section class="final" id="estimate-final" data-section="final-cta" aria-labelledby="final-title">
-  <div class="final__strip" aria-hidden="true"><span class="final__worn"></span><span class="final__bare" data-final-bare></span><span class="final__line" data-final-line></span></div>
+  <div class="final__strip" aria-hidden="true">
+    <img class="final__worn" src="/a-bueno-hardwood-floors-preview/assets/img/final/final-worn-1600.webp" srcset="/a-bueno-hardwood-floors-preview/assets/img/final/final-worn-960.webp 960w, /a-bueno-hardwood-floors-preview/assets/img/final/final-worn-1600.webp 1600w, /a-bueno-hardwood-floors-preview/assets/img/final/final-worn-2400.webp 2400w" sizes="100vw" width="2400" height="794" alt="" loading="lazy" decoding="async">
+    <img class="final__bare" src="/a-bueno-hardwood-floors-preview/assets/img/final/final-bare-1600.webp" srcset="/a-bueno-hardwood-floors-preview/assets/img/final/final-bare-960.webp 960w, /a-bueno-hardwood-floors-preview/assets/img/final/final-bare-1600.webp 1600w, /a-bueno-hardwood-floors-preview/assets/img/final/final-bare-2400.webp 2400w" sizes="100vw" width="2400" height="794" alt="" loading="lazy" decoding="async" data-final-bare>
+    <span class="final__line" data-final-line></span>
+  </div>
   <div class="wrap final__grid">
     <div class="final__copy">
       <p class="label label--dark" data-reveal-title><svg class="hb" aria-hidden="true"><use href="#hb-mark"></use></svg>Your free estimate</p>

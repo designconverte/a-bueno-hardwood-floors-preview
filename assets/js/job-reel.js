@@ -263,6 +263,41 @@
   };
   Reel.prototype.prefetch = function (svc) { if (this.sets[svc]) this.load(this.sets[svc]); };
 
+  /* modo rolagem (celular): a página leva a obra. frac 0..1 = do antes ao acabado. Obra nova: espera carregar e entra
+     já na posição que a rolagem pede naquele momento (sem animação própria; quem anda é o dedo do visitante). */
+  Reel.prototype.scrubTo = function (svc, frac) {
+    var next = this.sets[svc], self = this;
+    if (!next) return;
+    this.touched = true;
+    if (this.introT) { clearTimeout(this.introT); this.introT = 0; }
+    if (this.seq) this.halt();
+    this.want = Math.max(0, Math.min(1, frac));
+    if (next !== this.cur) {
+      if (this.pending === svc) return;
+      this.pending = svc;
+      this.frame.classList.add('is-loading');
+      this.load(next).then(function () {
+        if (self.pending !== svc) return;
+        self.pending = null;
+        self.frame.classList.remove('is-loading');
+        self.cur.el.classList.remove('is-on');
+        next.el.classList.add('is-on');
+        self.cur = next; self.svc = svc;
+        self.root.style.setProperty('--ar', next.ar.toFixed(4));
+        self.buildStops();
+        self.p = self.want * (next.imgs.length - 1);
+        self.render();
+      });
+      return;
+    }
+    if (this.pending) { this.pending = null; this.frame.classList.remove('is-loading'); }
+    if (!next.loaded) this.load(next).then(function () { if (!next.loaded) { next.loaded = true; self.render(); } });
+    this.p = this.want * (this.n() - 1);
+    this.render();
+    if (this.p >= this.n() - 1 && !this.setFlash) { this.setFlash = true; this.flash(); }
+    if (this.p < this.n() - 1.5) this.setFlash = false;
+  };
+
   Reel.prototype.bind = function () {
     var self = this, rule = this.rule, frame = this.frame;
 
